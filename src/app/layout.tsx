@@ -1,3 +1,5 @@
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
@@ -19,7 +21,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
